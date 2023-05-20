@@ -1,0 +1,43 @@
+﻿<Window x:Class="Soccer.JointsRefineWindowBroad"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Soccer"
+        xmlns:control="clr-namespace:LControl;assembly=LControl"
+        mc:Ignorable="d" WindowState="Maximized" Loaded="Window_Loaded" Closing="Window_Closing"
+        Title="JointsRefineWindow" Height="450" Width="800">
+    <Grid>
+        <DockPanel>
+            <DockPanel DockPanel.Dock="Right" Width="300">
+                <StackPanel DockPanel.Dock="Bottom">
+                    <Button x:Name="btnPrevious" Click="btnPrevious_Click" Margin="20">
+                        <Label>Previous</Label>
+                    </Button>
+                    <Button x:Name="btnNext" Click="btnNext_Click">
+                        <Label>N_ext</Label>
+                    </Button>
+                    <Button x:Name="btnSave" Click="btnSave_Click">
+                        <Label>_Save</Label>
+                    </Button>
+                </StackPanel>
+
+                <StackPanel>
+                    <TextBlock x:Name="txtImageFilename"/>
+                    <TextBlock x:Name="txtScore"/>
+                    <TextBlock x:Name="txtIndex"/>
+                </StackPanel>
+            </DockPanel>
+
+            <DockPanel>
+                <UniformGrid Rows="4" DockPanel.Dock="Right" Width="300">
+                    <control:ImageDisplay x:Name="imageResult" ButtonVisibility="Collapsed"/>
+                    <control:ImageDisplay x:Name="imageResult1" ButtonVisibility="Collapsed"/>
+                    <control:ImageDisplay x:Name="imageResult2" ButtonVisibility="Collapsed"/>
+                    <control:ImageDisplay x:Name="imageResult3" ButtonVisibility="Collapsed"/>
+                </UniformGrid>
+                <control:ImageDisplay x:Name="imageDisplay" ButtonVisibility="Collapsed"/>
+            </DockPanel>
+        </DockPanel>
+    </Grid>
+</Window>
